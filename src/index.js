@@ -6,13 +6,14 @@ import * as serviceWorker from "./serviceWorker";
 import Provider from "./redux-provider";
 import { Router, Route } from "react-router";
 import appHistory from "./history";
-import Login from "./App";
+import ArtistsModal from "./ArtistsModal";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store>
       <Router history={appHistory}>
-        <Route path='/' exact component={App} />
+        <Route path='/' component={App} />
+        <Route path='/:id' exact component={ArtistsModal} />
       </Router>
     </Provider>
   </React.StrictMode>,
