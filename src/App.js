@@ -16,7 +16,7 @@ import appHistory from "./history";
 function App({ genres, fetchGenre, clearArtists, error = null }) {
   useEffect(() => {
     fetchGenre();
-  }, []);
+  }, [fetchGenre]);
 
   if (error) {
     return <h1>{error}</h1>;

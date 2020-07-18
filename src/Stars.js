@@ -15,7 +15,7 @@ function Stars({ artists, fetchGenreArtists, history, error = null }) {
 
   useEffect(() => {
     fetchGenreArtists(id);
-  }, []);
+  }, [fetchGenreArtists, id]);
 
   if (error) {
     return <h1>{error}</h1>;
